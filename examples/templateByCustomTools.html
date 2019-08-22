@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板渲染-数据替换</title>
+</head>
+<body>
+    <div id="div2"></div>
+<script type="text/template" id="div1">
+    <div>数据：{{data}}</div>
+    <div>年龄：{{age}}</div>
+    <div>姓名：{{name}}</div>
+</script>
+<script src="../customTools/customTools.js"></script>
+<script>
+    var data = { data: "123", name: "csdn", age: "xxoo" };
+    var div1 = document.getElementById('div1');
+    var div2 = document.querySelector('#div2');
+    div2.innerHTML = $customTools.template(div1.innerHTML, data);
+</script>
+</body>
+</html>
