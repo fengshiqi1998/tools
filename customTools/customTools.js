@@ -6,10 +6,10 @@ var $customTools = (function() {
     var funcs = {
         template: template
     };
-    /*
+   /**
     * 模板替换
-    * dom 目标标签（模板）的内容（innerHTML）
-    * data 传入的数据（json）
+    * @param {string} dom 目标标签（模板）的内容（innerHTML）
+    * @param {json} data 传入的数据
     */
     function template(dom, data) {
         // /s任何空白字符，包括空格、制表符、换页符等 <=> [ \f\n\r\t\v]
